@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg.jpg) center/cover no-repeat;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+  position: relative;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.vert-line {
+  height: 50px;
+  width: 1px;
+  background: #f0f0f0;
+}
+
+.text {
+  padding: 50px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.text h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+
+.text p {
+  padding-top: 10px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+nav {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul#top {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+nav ul li {
+  display: block;
+  padding: 12px 0;
+  width: 155px;
+  transition: background 0.5s ease;
+}
+
+nav ul li:hover {
+  background: rgba(225, 225, 225, 0.2);
+}
+
+nav ul li:first-child {
+  border-right: 1px solid #fff;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.page {
+  width: 60vw;
+  position: absolute;
+  margin: 38px auto;
+  background: rgba(0, 0, 0, 0.95);
+  color: #f0f0f0;
+  line-height: 1.7;
+  padding: 35px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.page>span {
+  display: block;
+  font-size: 26px;
+  text-align: right;
+}
+
+.page>span>i {
+  cursor: pointer;
+}
+
+.page .title {
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#input_book form>.input {
+  margin: 8px 0;
+}
+
+#input_book form>button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#input_book form>.input>label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+#input_book form>.input>input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#input_book form>.input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+#input_book form>.input_inline>label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#book_shelf .book_list {
+  padding: 16px;
+}
+
+#book_shelf .book_list>.book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#book_shelf .book_list>.book_item>div {
+  margin: 8px 0;
+}
+
+#book_shelf .book_list>.book_item>.action>button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#book_shelf .book_list>.book_item>.action>.green {
+  background-color: darkgreen;
+  color: white;
+}
+
+#book_shelf .book_list>.book_item>.action>.red {
+  background-color: darkred;
+  color: white;
+}
+
+@media screen and (max-width: 1170px) {
+  .page {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper,
+  .page {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  nav ul li {
+    width: auto;
+    padding: 7px 3px;
+  }
+  nav ul a {
+    font-size: 14px;
+  }
+}

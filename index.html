@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+  <title>Dicoding &#8212; Bookshelf Apps</title>
+
+  <script src='https://kit.fontawesome.com/36e6d2ebb2.js' crossorigin='anonymous'></script>
+  <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+  <header>
+    <div class='wrapper'>
+      <div class='icon'>
+        <i class="fas fa-book"></i>
+      </div>
+      <div class='vert-line'></div>
+      <div class='text'>
+        <h2>Bookshelf Apps</h2>
+        <p>Submission Belajar Membuat Front-End Web untuk Pemula</p>
+      </div>
+      <div class='vert-line'></div>
+      <nav>
+        <ul id="top">
+          <li><a href='#'>Tambah Buku Baru</a></li>
+          <li><a href='#'>Cari Buku (Opsional)</a></li>
+        </ul>
+        <ul id="bottom">
+          <li><a href='#'>Rak "Belum Selesai Dibaca"</a></li>
+          <li><a href='#'>Rak "Selesai Dibaca"</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id='input_book' class='page'>
+      <span class='close-btn'>
+				<i class='fas fa-times'></i>
+			</span>
+      <h2 class='title'>Masukkan Buku Baru</h2>
+      <form id='inputBook'>
+        <div class='input'>
+          <label for='inputBookTitle'>Judul</label>
+          <input id='inputBookTitle' type='text' required>
+        </div>
+        <div class='input'>
+          <label for='inputBookAuthor'>Penulis</label>
+          <input id='inputBookAuthor' type='text' required>
+        </div>
+        <div class='input'>
+          <label for='inputBookYear'>Tahun</label>
+          <input id='inputBookYear' type='number' required>
+        </div>
+        <div class='input_inline'>
+          <label for='inputBookIsFinished'>Selesai dibaca</label>
+          <input id='inputBookIsFinished' type='checkbox'>
+        </div>
+        <button id='bookSubmit' type='submit'>Masukkan Buku ke Rak</button>
+      </form>
+    </article>
+
+    <article id='search_book' class='page'>
+      <span class='close-btn'>
+				<i class='fas fa-times'></i>
+			</span>
+      <h2 class='title'>Cari Buku (Opsional)</h2>
+      <p>Mohon maaf, fitur ini belum diimplementasikan.</p>
+    </article>
+
+    <article id='book_shelf' class='page'>
+      <span class='close-btn'>
+				<i class='fas fa-times'></i>
+			</span>
+      <h2 class='title'>Rak "Belum Selesai Dibaca"</h2>
+      <div id='unfinishedBookshelfList' class='book_list'>
+      </div>
+    </article>
+
+    <article id='book_shelf' class='page'>
+      <span class='close-btn'>
+				<i class='fas fa-times'></i>
+			</span>
+      <h2 class='title'>Rak "Selesai Dibaca"</h2>
+      <div id='finishedBookshelfList' class='book_list'>
+      </div>
+    </article>
+
+    <script src='js/book.js'></script>
+    <script src='js/dom.js'></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
